@@ -1,0 +1,137 @@
+body {
+  font-size: 18px;
+  background-image: url('../images/nan');
+  position: relative;
+}
+body::before {
+  content: '';
+  position: absolute; /* Position it absolutely within the body */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255,0.9); /* Adjust the color and opacity as needed */
+  z-index: -1;
+}
+
+
+.container {
+  max-width: 80%; /* Control the width of the content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 30px 120px 0px 120px; /* Top, Right, Bottom (0 for no padding), Left */
+  background-color: rgba(255, 255, 255, 0.73); /* Semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.0); /* Light background for sidebar */
+  padding: 20px;
+  position: fixed; /* Sidebar stays fixed on scroll */
+  top: 0; /* Align with the top of the container */
+  left: 0;
+  width: 10% !important; /* Adjust the width as needed */
+  height: auto; /* Allow the height to fit the content */
+  max-height: 100vh; /* Ensure the sidebar doesn't exceed the viewport height */
+  overflow-y: auto; /* Add scroll if content exceeds the viewport height */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  color: #cc7000;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling across the entire page */
+}
+
+
+.button-link {
+  background-color: transparent;
+  color: gray;
+  border: 1px solid gray;
+  padding: 8px 5px; /* Adjust padding as needed */
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px; /* Adjust height as needed */
+  margin: 0;
+}
+
+.small-indent {
+  display: inline-block;
+  width: 0px; /* Adjust the width for the desired indent */
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+    padding: 20px; /* Reduced padding for mobile */
+    width: 100vw !important;  /* Use viewport width for full screen width */
+  }
+  .sidebar {
+    display: none; /* Completely removes the sidebar on mobile */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 1000px) {
+  html, body {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Set width to 100% */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box; /* Include padding and borders in element's total width */
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 10px; /* Reduced padding for mobile */
+    margin: 0; /* Remove margin to make the container take the whole screen */
+    width: 100vw !important;  /* Use viewport width for full screen width */
+    box-shadow: none; /* Optional: Remove shadow for a flat look */
+  }
+
+  body {
+    font-size: 16px; /* Slightly smaller font size for mobile */
+  }
+
+  .sidebar {
+    display: none; /* Completely removes the sidebar on mobile */
+  }
+
+  .button-link {
+    font-size: 9px; /* Smaller font size for mobile buttons */
+    padding: 6px 4px; /* Adjust button padding for smaller screens */
+  }
+
+  .seven.columns, .five.columns {
+    width: 70%; /* Make both columns take full width */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .row {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+}
