@@ -89,10 +89,9 @@
           
           <ul>
             <li>
-              The first is in predict-then-optimize settings where the downstream optimization problem is combinatorial. In these settings, standard deep learning architectures often lead to downstream optimization problems that are difficult to solve and hard to scale. My goal is to design architectures that are both expressive predictors and more compatible with downstream combinatorial optimization. In recent work, we introduced Deep Flow Networks, a new architecture for discrete predict-then-optimize problems that combines strong predictive performance with substantially faster downstream optimization than standard neural baselines.
-            </li>
+              The first direction focuses on predict-then-optimize settings in which the downstream decision problem is combinatorial. While standard deep learning architectures offer strong predictive performance, they often induce downstream combinatorial optimization problems that are difficult to solve at scale. My goal is to design architectures that retain the predictive power of deep learning while remaining optimization-friendly. For example, our recent work on Deep Flow Networks develops a new architecture for discrete predict-then-optimize problems, achieving strong predictive performance while enabling substantially faster downstream optimization than standard neural baselines.
             <li>
-              The second is the use of deep learning to improve combinatorial optimization solvers. In ongoing work, we are developing a deep learning-based discrete local search algorithm that is cheaper and more amenable to parallelization than standard methods, while still producing high-quality solutions.
+              The second direction focuses on using deep learning to improve algorithms for combinatorial optimization. Recently, I have been developing learning-enhanced local search algorithms that combine the computational efficiency and parallelizability of local search with the representational power of deep learning.
             </li>
           </ul>
         </div>
