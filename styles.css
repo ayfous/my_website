@@ -228,7 +228,7 @@ p, h1, h2, h3 { margin: 0; }
 
 /* Original website introduction, scoped to preserve the later sections. */
 .original-intro {
-  padding: 52px 0 38px;
+  padding: 84px 0 38px;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
@@ -261,7 +261,7 @@ p, h1, h2, h3 { margin: 0; }
 .original-intro-photo img { display: block; width: 94%; height: auto; margin-left: auto; }
 .original-intro-background p:last-child { margin-bottom: 0; }
 @media (max-width: 760px) {
-  .original-intro { padding: 34px 0; font-size: 16px; }
+  .original-intro { padding: 52px 0 34px; font-size: 16px; }
   .original-intro-row { grid-template-columns: 1fr; gap: 0; }
   .original-intro h1 { font-size: 40px; }
   .original-intro h5 { font-size: 20px; }
