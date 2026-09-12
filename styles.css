@@ -43,34 +43,6 @@ p, h1, h2, h3 { margin: 0; }
   transform: translateY(-180%);
 }
 .skip-link:focus { transform: translateY(0); color: white; }
-.site-header {
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 32px;
-  border-bottom: 1px solid var(--rule);
-}
-.site-name {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: -.2px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.name-dot { width: 6px; height: 6px; border-radius: 50%; background: #739076; }
-.site-header nav { display: flex; gap: 29px; align-items: center; justify-content: flex-end; margin-left: auto; }
-.site-header nav a {
-  padding: 12px 0;
-  font-size: 14px;
-  color: var(--muted);
-  text-decoration: none;
-}
-.site-header nav a:hover { color: var(--accent); text-decoration: underline; }
 .content-section {
   display: grid;
   grid-template-columns: 170px minmax(0, 1fr);
@@ -201,11 +173,6 @@ p, h1, h2, h3 { margin: 0; }
 
 @media (max-width: 720px) {
   .site-shell { padding: 0 25px; }
-  .site-header { min-height: 84px; gap: 20px; }
-  .site-name { font-size: 14px; gap: 8px; }
-  .site-header nav { gap: 17px; }
-  .site-header nav a { font-size: 14px; }
-  .name-dot { display: none; }
   .content-section { display: block; padding: 31px 0 37px; }
   .section-heading { margin-bottom: 24px; }
   .section-heading h2 { font-size: 28px; }
@@ -216,11 +183,6 @@ p, h1, h2, h3 { margin: 0; }
 @media (max-width: 560px) {
   html { scroll-padding-top: 22px; }
   .site-shell { padding: 0 22px; }
-  .site-header { flex-direction: column; align-items: flex-start; justify-content: center; gap: 3px; padding: 16px 0 12px; }
-  .site-name { font-size: 15px; }
-  .name-dot { display: block; }
-  .site-header nav { width: 100%; gap: 26px; }
-  .site-header nav a { font-size: 14px; padding: 8px 0; }
   .content-section { padding-top: 28px; padding-bottom: 31px; }
   .section-heading { margin-bottom: 22px; }
   .paper { display: block; padding: 21px 0; }
@@ -240,7 +202,6 @@ p, h1, h2, h3 { margin: 0; }
 
 @media (max-width: 350px) {
   .site-shell { padding: 0 18px; }
-  .site-header nav { gap: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -250,7 +211,7 @@ p, h1, h2, h3 { margin: 0; }
 @media print {
   body { background: white; font-size: 11px; }
   .site-shell { max-width: none; padding: 0; }
-  .site-header, .skip-link, .site-footer { display: none; }
+  .skip-link, .site-footer { display: none; }
   .content-section { display: grid; grid-template-columns: 105px minmax(0, 1fr); gap: 20px; padding: 24px 0; }
   .section-heading { position: static; }
   .section-heading h2 { font-size: 23px; }
