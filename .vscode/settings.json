@@ -1,0 +1,11 @@
+{
+  "livePreview.autoRefreshPreview": "On Changes to Saved Files",
+  "livePreview.defaultPreviewPath": "/index.html",
+  "livePreview.hostIP": "127.0.0.1",
+  "livePreview.portNumber": 3000,
+  "livePreview.openPreviewTarget": "Embedded Preview",
+  "livePreview.httpHeaders": {
+    "Accept-Ranges": "bytes",
+    "Content-Security-Policy": "connect-src 'self' ws://127.0.0.1:*; img-src 'self' data: blob:;"
+  }
+}
