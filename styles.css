@@ -258,7 +258,7 @@ p, h1, h2, h3 { margin: 0; }
 .original-intro p { margin: 0 0 25px; }
 .original-intro a { color: #222; text-decoration: none; }
 .original-intro a:hover { color: var(--accent-hover); text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 3px; }
-.original-intro-photo img { display: block; width: 94%; height: auto; margin-left: auto; }
+.original-intro-photo img { display: block; width: 94%; height: auto; margin-left: 0; }
 .original-intro-background p:last-child { margin-bottom: 0; }
 @media (max-width: 760px) {
   .original-intro { padding: 52px 0 34px; font-size: 16px; }
