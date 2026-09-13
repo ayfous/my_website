@@ -317,7 +317,7 @@ p, h1, h2, h3 { margin: 0; }
   .paper h3 { font-size: calc(var(--entry-title-size) - 2px); }
   .paper-authors { font-size: calc(var(--entry-author-size) - 2px); }
   .paper-detail, .paper .resource-note { font-size: calc(var(--entry-detail-size) - 2px); }
-  .paper-resources { font-size: 11px; }
+  .paper-resources { font-size: calc(var(--entry-detail-size) - 2px); }
 }
 
 /* Match the preferred 90% desktop viewing scale. */
