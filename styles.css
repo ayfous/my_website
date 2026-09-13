@@ -292,3 +292,30 @@ p, h1, h2, h3 { margin: 0; }
 @media (max-width: 560px) {
   .original-intro .intro-profile-links { font-size: 14px; }
 }
+
+/* Keep academic text at the introduction's corresponding reading sizes. */
+@media screen {
+  .content-section {
+    --entry-title-size: 24px;
+    --entry-author-size: 18px;
+    --entry-detail-size: 16px;
+  }
+  .paper h3, .course h3, .talk-title { font-size: var(--entry-title-size); }
+  .paper-authors { font-size: var(--entry-author-size); }
+  .paper-detail, .resource-note, .course-role, .course-description,
+  .talk-events, .service-content { font-size: var(--entry-detail-size); }
+}
+@media screen and (max-width: 760px) {
+  .content-section {
+    --entry-title-size: 20px;
+    --entry-author-size: 16px;
+  }
+}
+
+/* Reduce research entry text without changing the other sections. */
+@media screen {
+  .paper h3 { font-size: calc(var(--entry-title-size) - 2px); }
+  .paper-authors { font-size: calc(var(--entry-author-size) - 2px); }
+  .paper-detail, .paper .resource-note { font-size: calc(var(--entry-detail-size) - 2px); }
+  .paper-resources { font-size: 11px; }
+}
