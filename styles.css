@@ -319,3 +319,8 @@ p, h1, h2, h3 { margin: 0; }
   .paper-detail, .paper .resource-note { font-size: calc(var(--entry-detail-size) - 2px); }
   .paper-resources { font-size: 11px; }
 }
+
+/* Match the preferred 90% desktop viewing scale. */
+@media screen and (min-width: 1000px) {
+  .site-shell { zoom: 0.9; }
+}
