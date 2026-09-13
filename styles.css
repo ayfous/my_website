@@ -52,7 +52,7 @@ p, h1, h2, h3 { margin: 0; }
 }
 .section-heading h2 {
   font-family: var(--serif);
-  font-size: 29px;
+  font-size: 30px;
   line-height: 1.3;
   letter-spacing: -.7px;
   font-weight: 400;
@@ -79,9 +79,9 @@ p, h1, h2, h3 { margin: 0; }
   font-weight: 400;
   text-wrap: pretty;
 }
-.paper-authors { font-size: 13.5px; color: var(--muted); margin-top: 7px; line-height: 1.65; }
+.paper-authors { font-size: 13.5px; color: var(--muted); margin-top: 5px; line-height: 1.65; }
 .author-self { color: #3f4e44; }
-.paper-detail { font-size: 13.5px; margin-top: 4px; line-height: 1.65; color: #424e46; }
+.paper-detail { font-size: 13.5px; margin-top: 2px; line-height: 1.65; color: #424e46; }
 .paper-venue, .paper-distinction { font-weight: 600; }
 .paper-detail + .paper-detail { margin-top: 1px; }
 .paper-detail.award { color: #826420; }
@@ -90,7 +90,7 @@ p, h1, h2, h3 { margin: 0; }
   flex-wrap: wrap;
   align-items: baseline;
   gap: 4px 19px;
-  margin-top: 9px;
+  margin-top: 6px;
   font-size: 13px;
   line-height: 1.7;
   text-align: left;
@@ -187,7 +187,7 @@ p, h1, h2, h3 { margin: 0; }
   .section-heading { margin-bottom: 22px; }
   .paper { display: block; padding: 21px 0; }
   .paper h3 { font-size: 19px; line-height: 1.43; }
-  .paper-authors { font-size: 13px; margin-top: 7px; }
+  .paper-authors { font-size: 13px; margin-top: 5px; }
   .paper-detail { font-size: 13px; }
   .resource-note { font-size: 12px; }
   .course h3 { font-size: 18px; }
@@ -302,7 +302,7 @@ p, h1, h2, h3 { margin: 0; }
   }
   .paper h3, .course h3, .talk-title { font-size: var(--entry-title-size); }
   .paper-authors { font-size: var(--entry-author-size); }
-  .paper-detail, .resource-note, .course-role, .course-description,
+  .paper-detail, .resource-note, .paper-resources, .course-role, .course-description,
   .talk-events, .service-content { font-size: var(--entry-detail-size); }
 }
 @media screen and (max-width: 760px) {
@@ -310,14 +310,6 @@ p, h1, h2, h3 { margin: 0; }
     --entry-title-size: 20px;
     --entry-author-size: 16px;
   }
-}
-
-/* Reduce research entry text without changing the other sections. */
-@media screen {
-  .paper h3 { font-size: calc(var(--entry-title-size) - 2px); }
-  .paper-authors { font-size: calc(var(--entry-author-size) - 2px); }
-  .paper-detail, .paper .resource-note { font-size: calc(var(--entry-detail-size) - 2px); }
-  .paper-resources { font-size: calc(var(--entry-detail-size) - 2px); }
 }
 
 /* Match the preferred 90% desktop viewing scale. */
