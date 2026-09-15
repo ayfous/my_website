@@ -96,6 +96,7 @@ p, h1, h2, h3 { margin: 0; }
   text-align: left;
 }
 .paper-resources a,
+.paper-resources .abstract-toggle,
 .original-intro .intro-profile-links a {
   position: relative;
   display: inline-block;
@@ -106,6 +107,9 @@ p, h1, h2, h3 { margin: 0; }
   text-underline-offset: 3px;
 }
 .paper-resources a + a::before,
+.paper-resources > .abstract-toggle + a::before,
+.paper-resources > * + .abstract-toggle::before,
+.paper-resources > .abstract-toggle + .resource-note::before,
 .intro-profile-links a + a::before {
   content: "";
   position: absolute;
@@ -119,6 +123,39 @@ p, h1, h2, h3 { margin: 0; }
 .paper-resources a:hover { text-decoration-color: currentColor; }
 .paper-resources a:focus-visible { outline-offset: 3px; }
 .resource-note { color: var(--muted); font-style: italic; font-size: 12px; }
+.paper-resources > .abstract-toggle + .resource-note { position: relative; }
+.abstract-toggle {
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+  text-decoration-thickness: 1px;
+}
+.abstract-toggle::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 7px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-3px) rotate(45deg);
+}
+.abstract-toggle[aria-expanded="true"]::after {
+  transform: translateY(0) rotate(225deg);
+}
+.abstract-toggle:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
+.abstract-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.paper-abstract {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: var(--entry-detail-size, 10px);
+  line-height: 1.7;
+}
+
+.abstract-math { display: inline; }
+.paper-abstract .katex { font-size: 1em; }
 .course { padding: 0 0 25px; }
 .course + .course { padding-top: 23px; border-top: 1px solid var(--rule); }
 .course:last-child { padding-bottom: 0; }
