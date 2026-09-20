@@ -1,0 +1,419 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{needspace}
+\input{glyphtounicode}
+
+\makeatletter
+\newcommand{\cvIncreaseTextSize}{\fontsize{\dimexpr\f@size pt+1pt\relax}{\dimexpr\f@baselineskip+1.2pt\relax}\selectfont
+}
+\renewcommand{\normalsize}{\@setfontsize\normalsize{11.95}{14.8}\abovedisplayskip 11\p@ \@plus3\p@ \@minus6\p@
+  \abovedisplayshortskip \z@ \@plus3\p@
+  \belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@
+  \belowdisplayskip \abovedisplayskip
+  \let\@listi\@listI
+}
+\AddToHook{cmd/small/after}{\cvIncreaseTextSize}
+\AddToHook{cmd/large/after}{\cvIncreaseTextSize}
+\AddToHook{cmd/Huge/after}{\cvIncreaseTextSize}
+\AddToHook{cmd/tiny/after}{\cvIncreaseTextSize}
+\makeatother
+\DeclareMathSizes{11}{11}{8}{6}
+\DeclareMathSizes{11.95}{11.95}{9}{7}
+\normalsize
+
+\pagestyle{fancy}
+\fancyhf{} \fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-1pt}]
+
+\pdfgentounicode=1
+
+\usepackage{xifthen} \def\spacePapers{4}
+
+\newlist{paperlist}{enumerate}{1}
+\setlist[paperlist,1]{
+    label={[\arabic*]},
+    font=\small,
+    leftmargin=0.15in,
+    labelindent=!,
+    labelwidth=17pt,
+    labelsep=5pt,
+    itemindent=0pt,
+    align=right,
+    itemsep=0pt,
+    parsep=0pt
+}
+
+\newcommand{\resumePaper}[2][]{
+    \ifthenelse{\isempty{#1} \OR \NOT \equal{#1}{noindex}}{
+        \item
+        \small#2
+        \vspace{\spacePapers pt}
+    }{
+        \item[] \small#2
+        \vspace{\spacePapers pt}
+    }
+}
+
+\newcommand{\resumeNote}[1]{\vspace{2pt}\small #1\normalsize}
+\newcommand{\resumeItem}[1]{\item \small #1\normalsize}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingDouble}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingTEACHING}[6]{
+  \vspace{-2pt}\item
+    \begin{tabularx}{0.97\textwidth}[t]{>{\raggedright\arraybackslash}Xr}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \small #4 \\
+      \textit{\small#5} & \small #6
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Ayoub Foussoul} \\ \vspace{6pt}
+    \href{mailto:ayoub.foussoul@chicagobooth.edu}{ayoub.foussoul@chicagobooth.edu}\enspace$\cdot$\enspace
+    \href{https://www.ayoubfoussoul.com/?src=CV}{www.ayoubfoussoul.com}
+
+\end{center}
+
+\vspace{1mm}
+\section{Academic Appointments}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Chicago Booth School of Business}{2025 -- }
+      {Postdoctoral Researcher}{Chicago, IL}
+      \resumeItemListEnd
+
+\vspace{-2.3mm}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Columbia University}{2020 -- 2025}
+      {PhD in Operations Research}{New York, NY}
+    \resumeItemListStart
+    \resumeItem{Advisor: Vineet Goyal}
+    \resumeItem{Thesis: Robust and Tractable Policies for Resource Allocation Under Uncertainty}
+    \resumeItemListEnd
+    {\it \small Master of Science in Operations Research}{}
+    \resumeSubheadingDouble
+      {École Polytechnique}{2017 -- 2020}
+      {Master of Science in Applied Mathematics
+      }{Paris, France}{Bachelor of Science in Mathematics and Computer Science}{}
+
+    \resumeSubheading
+      {Lycée Moulay Youssef}{2015 -- 2017}
+      {Classes préparatoires, Mathematics, Physics, Computer Science}{Rabat, Morocco}
+
+    \resumeSubHeadingListEnd
+
+\section{Papers}
+\begin{paperlist}
+
+\resumePaper
+{Discrete Input Landscapes of Neural Networks \\
+    \emph{Ozan Candogan \& Ayoub Foussoul}\\
+    \emph{Working paper}\\
+    \emph{In preparation for submission to \textbf{ICLR 2027}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Neural Scaling Laws for Customer Choice Prediction \\
+    \emph{Ozan Candogan, Ayoub Foussoul \& Feiyu Han}\\
+    \emph{Working paper}\\
+    \emph{Preliminary version submitted to the \textbf{NeurIPS 2026 MLxOR Workshop}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Deep Flow Networks: Optimization-Friendly Surrogates for Integer Predict-then-Optimize (\href{https://openreview.net/forum?id=Z7rhDaBvBo}{\texttt{link}}) \\
+    \emph{Ozan Candogan \& Ayoub Foussoul}\\
+    \emph{Submitted to \textbf{Management Science}}\\
+    \emph{Preliminary version appeared in proceedings of \textbf{ICML 2026} \textbf{(spotlight paper)}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Distributionally Robust Newsvendor on a Metric (\href{https://arxiv.org/abs/2410.12134}{\texttt{link}}) \\
+    \emph{Ayoub Foussoul \& Vineet Goyal}\\
+    \emph{Major revision in \textbf{Operations Research}}\\
+    \emph{Extended abstract appeared in proceedings of \textbf{EC 2025}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{LP-based Approximations for Disjoint Bilinear and Two-Stage Adjustable Robust Optimization (\href{https://link.springer.com/article/10.1007/s10107-023-02004-9}{\texttt{link}}) \\
+    \emph{Omar El Housni, Ayoub Foussoul \& Vineet Goyal}\\
+    \emph{\textbf{Mathematical Programming}}\\
+    \emph{Preliminary version appeared in proceedings of \textbf{IPCO 2022}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Two-Stage Stochastic Stable Matching (\href{https://link.springer.com/chapter/10.1007/978-3-031-59835-7_12}{\texttt{link}}) \\
+    \emph{Ayoub Foussoul, Yuri Faenza \& Chengyue He}\\
+    \emph{In proceedings of \textbf{IPCO 2024}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Minimum Cut Representability of Stable Matching Problems (\href{https://arxiv.org/abs/2504.04577}{\texttt{link}}) \\
+    \emph{Ayoub Foussoul, Yuri Faenza \& Chengyue He}\\
+    \emph{Major revision in \textbf{Operations Research}}\\
+    \hspace{0.15in}$\star$ \textit{Honorable Mention, INFORMS Optimization Society, 2025 Student Paper Prize
+ }
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Fully-Dynamic Load Balancing (\href{https://link.springer.com/chapter/10.1007/978-3-031-59835-7_14}{\texttt{link}}) \\
+    \emph{Ayoub Foussoul, Vineet Goyal \& Amit Kumar}\\
+    \emph{\textbf{Mathematical Programming}}\\
+    \emph{Preliminary version appeared in proceedings of \textbf{IPCO 2024}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Last Switch Dependent Bandits with Monotone Payoff Functions (\href{https://proceedings.mlr.press/v202/foussoul23a/foussoul23a.pdf}{\texttt{link}}) \\
+    \emph{Ayoub Foussoul, Vineet Goyal, Orestis Papadigenopoulos \& Assaf Zeevi}\\
+    \emph{In proceedings of \textbf{ICML 2023}}
+}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{MNL-Bandit in Non-Stationary Environments (\href{https://arxiv.org/abs/2303.02504}{\texttt{link}}) \\
+    \emph{Ayoub Foussoul, Vineet Goyal \& Varun Gupta}
+}
+
+\vspace{-2mm}
+
+\end{paperlist}
+\section{Technical Reports}
+\begin{paperlist}
+\resumePaper
+{Conditioning of Piecewise Linear Approximations with an Application to the Monitoring of the COVID-19 Epidemic\\
+    \emph{Marianne Akian, Jérôme Bolt, Ayoub Foussoul, Stephane Gaubert \& Laurent Massoulié}\\
+    \hspace{0.15in}$\star$ \textit{École Polytechnique Research Prize in Applied Mathematics}}
+\vspace{\spacePapers pt}
+
+\resumePaper
+{Identification of the Optimal Tropical Hypersurfaces Explaining Consumers’ Responses
+to Prices\\
+    \emph{Xavier Allamigeon, Ayoub Foussoul \& Stephane Gaubert}\\
+    \hspace{0.15in}$\star$ \textit{École Polytechnique Research Prize in Applied Mathematics}
+}
+
+\end{paperlist}
+
+\section{Teaching Experience}
+  \resumeSubHeadingListStart
+     \resumeSubheadingTEACHING
+          {Optimization I, IEOR E6613}{Fall 2021, 2022}
+          {Core PhD course on linear and convex optimization}{}
+          {Teaching Assistant \& Guest Lecturer}{}
+    \resumeSubheadingTEACHING
+          {Optimization II, IEOR E6614}{Spring 2023, 2024, 2025}
+          {Core PhD course on combinatorial optimization}{}
+          {Teaching Assistant}{}
+    \resumeSubheadingTEACHING
+          {Convex Optimization, EEOR E6616}{Spring 2022}
+          {PhD course on convex optimization}{}
+          {Teaching Assistant}{}
+    \resumeSubheadingTEACHING
+          {Optimization Methods, IEOR E4004}{Fall 2023}
+          {Core master’s course on optimization}{}
+          {Teaching Assistant \& Guest Lecturer}{}
+    \resumeSubheadingTEACHING
+          {Applications for Financial Engineering, IEOR E4500}{Spring 2021}
+          {Master’s course on quantitative methods in financial engineering}{}
+          {Teaching Assistant}{}
+    \resumeSubheadingTEACHING
+          {Academic Tutor, Le Valdocco}{2017 -- 2018}
+          {Provided academic support and mentoring to underprivileged students at a non-profit educational organization.}{}
+          {}{}
+
+\resumeSubHeadingListEnd
+
+\Needspace{8\baselineskip}
+\section{Industry Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {INRIA}{Mar 2020 -- Sep 2020}
+      {Research Intern}{Paris, France}
+      \resumeItemListStart
+  \resumeItem{\textbf{Constrained piecewise-linear approximation for epidemic monitoring:} Developed a dynamic-programming method for constrained piecewise-linear approximation in $L_p$ norms ($p\ge 1$) and applied it to French COVID-19 observables (SIVIC/SAMU) (see acknowledgments in \href{https://www.numdam.org/articles/10.5802/crmath.99/}{paper}).}
+  \resumeItem{\textbf{VC dimension of tropical polynomials:} Studied tropical polynomial classifiers and proved that the VC dimension of tropical polynomials matches that of classical real polynomials.}
+\resumeItemListEnd
+
+\vspace{3mm}
+\resumeSubheading
+  {Padoa}{Jun 2019 -- Sep 2019}
+  {Data Analyst Intern}{Paris, France}
+  \vspace{0mm}
+\resumeItemListStart
+\resumeNote{\hspace{-8mm}Occupational-medicine platform connecting clinicians, employers, and employees}
+  \resumeItem{Implemented a Health Statistics page in the clinician-facing web app.}
+  \resumeItem{Extended the backend Stats API to expose the KPI/statistics required by the new dashboard.}
+\resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Service and Outreach}
+
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+    {Elected Student Representative, École Polytechnique (Class of 2020)}{}
+    \resumeProjectHeading
+    {Co-organizer of IEOR PhD Tutorial Series}{}
+    \resumeProjectHeading
+    {\parbox[t]{0.97\textwidth}{\small\raggedright
+    \settowidth{\hangindent}{Reviewer: }\hangafter=1
+    Reviewer: Management Science, Mathematical Programming, Optimization Letters,
+    \mbox{NeurIPS MLxOR Workshop}, INFORMS Journal on Computing, IPCO, SODA, STOC, EC, ICML}}{}
+\resumeSubHeadingListEnd
+
+\section{Awards}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+    {Honorable Mention in the INFORMS Optimization Society Student Paper Prize}{2025}
+    \resumeProjectHeading
+    {Postgraduate Excellence Scholarship (OCP Foundation)}{2020}
+    \resumeProjectHeading
+    {École Polytechnique Research Prize in Applied Mathematics}{2020}
+    \resumeProjectHeading
+    {French Government Major-Excellence Scholarship}{2017}
+    \resumeSubHeadingListEnd
+\section{Talks}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textit{Deep Flow Networks: Optimization-Friendly Surrogates for Integer Predict-then-Optimize}}{}
+\resumeItemListStart
+\resumeItem{INFORMS Annual Meeting, November 2026, San Francisco, CA}
+\resumeItem{LAMP Workshop at TTIC, August 2026, Chicago, IL (poster session)}
+\resumeItem{Machine Learning for Algorithms Workshop at STOC 2026, June 2026, Salt Lake City, UT (poster session)}
+\resumeItem{Chicago Operations Day, June 2026, Chicago, IL (poster session)}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textit{Distributionally Robust Newsvendor on a Metric}}{}
+\resumeItemListStart
+\resumeItem{INFORMS Annual Meeting, October 2025, Atlanta, GA}
+\resumeItem{Revenue Management and Pricing Conference (RMP), July 2025, New York, NY}
+\resumeItem{ACM Conference on Economics and Computation (EC), July 2025, Stanford, CA}
+\resumeItem{Manufacturing \& Service Operations Management Conference (MSOM), June 2025, London}
+\resumeItem{Columbia University Data Science Day, April 2025, New York, NY (poster session)}
+\resumeItem{IEOR Colloquium, November 2024, New York, NY}
+\resumeItem{INFORMS Annual Meeting, October 2024, Seattle, WA}
+\resumeItem{Cornell ORIE Young Researchers Workshop, October 2024, Ithaca, NY}
+\resumeItem{Northwestern Kellogg Operations Management Rookiepalooza, October 2024, Evanston, IL}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textit{Two-Stage Stochastic Stable Matching}}{}
+\resumeItemListStart
+\resumeItem{Integer Programming and Combinatorial Optimization Conference (IPCO), July 2024, Wrocław}
+\resumeItem{Columbia University Data Science Day, April 2024, New York, NY (poster session)}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textit{Fully-Dynamic Load Balancing}}{}
+\resumeItemListStart
+\resumeItem{Integer Programming and Combinatorial Optimization Conference (IPCO), July 2024, Wrocław}
+\resumeItem{Columbia IEOR Student Seminar, February 2024, New York, NY}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textit{Last Switch Dependent Bandits with Monotone Payoff Functions}}{}
+\resumeItemListStart
+\resumeItem{International Conference on Machine Learning (ICML), July 2023, Honolulu, HI (poster session)}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textit{MNL-Bandit in Non-Stationary Environments}}{}
+\resumeItemListStart
+\resumeItem{DSI Financial and Business Analytics Poster Session, November 2023, New York, NY (poster session)}
+\resumeItem{INFORMS Annual Meeting, October 2023, Phoenix, AZ}
+\resumeItem{Revenue Management and Pricing Conference (RMP), July 2023, London}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textit{LP-based Approximations for Disjoint Bilinear and Two-Stage Adjustable Robust Optimization}}{}
+\resumeItemListStart
+\resumeItem{International Symposium on Mathematical Programming (ISMP), July 2024, Montréal}
+\resumeItem{International Research and Innovation Seminar (IRIS), December 2023, Ben Guerir}
+\resumeItem{INFORMS Annual Meeting, October 2022, Indianapolis, IN}
+\resumeItem{International Conference on Continuous Optimization (ICCOPT), July 2022, Bethlehem, PA}
+\resumeItem{Integer Programming and Combinatorial Optimization Conference (IPCO), June 2022, Eindhoven}
+\resumeItem{INFORMS Optimization Society Conference (IOS), March 2022, Greenville, SC}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
