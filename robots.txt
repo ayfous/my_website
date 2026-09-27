@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /*.pdf
 Disallow: /*.PDF
+Allow: /files/discrete-input-landscapes-full-paper.pdf$
 Sitemap: https://ayoubfoussoul.com/sitemap.xml
