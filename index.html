@@ -6,12 +6,17 @@
 
   <meta name="theme-color" content="#f8f8f3">
   <title>Ayoub Foussoul</title>
+  <script>
+    if (location.protocol === "file:" || ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) {
+      document.documentElement.classList.add("local-photo-placeholder");
+    }
+  </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600">
   <link rel="stylesheet" href="assets/katex/katex.min.css">
   <link rel="stylesheet" href="styles.css">
 
   <meta charset="utf-8"/>
-  <meta content="Ayoub Foussoul is a Postdoctoral Researcher at the University of Chicago Booth School of Business working at the intersection of deep learning and combinatorial optimization." name="description"/>
+  <meta content="Ayoub Foussoul is a Postdoctoral Researcher at the University of Chicago Booth School of Business studying deep learning for operations." name="description"/>
   <meta content="Ayoub Foussoul" name="author"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <script type="application/ld+json">
@@ -57,7 +62,10 @@
             Hello! I am a Postdoctoral Researcher at the <a class="hidelink" href="https://www.chicagobooth.edu/" target="_blank">University of Chicago Booth School of Business</a>, working with <a class="hidelink" href="https://www.chicagobooth.edu/faculty/directory/c/ozan-candogan" target="_blank">Prof. Ozan Candogan</a>. 
           </p>
 <p>
-            I am broadly interested in the intersection of deep learning and combinatorial optimization. My current work focuses on designing deep learning architectures that are both expressive and tractable to optimize over discrete inputs. This is especially important in predict-then-optimize settings, where the learned model is used in a downstream combinatorial optimization problem. I am also developing methods that use deep learning to enhance combinatorial optimization solvers.
+            I am interested in deep learning for operations. My research develops theoretical insights into how deep learning interacts with the structure of operational problems and uses these insights to design practical methods for improving decision making in areas such as supply chains, revenue management, and matching markets.
+          </p>
+<p>
+            Recently, I have been investigating the interplay between deep learning and operational problems involving discrete decisions. In particular, I study how neural networks learn and generalize in these settings, and develop models and algorithms for efficiently solving optimization problems arising in these contexts.
           </p>
 </div>
 </div>
