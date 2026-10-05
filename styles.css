@@ -308,7 +308,7 @@ p, h1, h2, h3 { margin: 0; }
 }
 .original-intro-background p:last-child { margin-bottom: 0; }
 @media screen and (min-width: 761px) {
-  .original-intro-photo { transform: translateY(48px); }
+  .original-intro-photo { transform: translateY(24px); }
 }
 @media (max-width: 760px) {
   .original-intro { padding: 52px 0 34px; font-size: 16px; }
