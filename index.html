@@ -328,19 +328,12 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">â€
 
   const device = { mobile: isMobile, src: SRC };
 
-  // --- GEO + warm-start cache ---
-  const GEO_CACHE_KEY = 'geo_v1';
-  const geo = { country:"", city:"", postal:"", timezone:(Intl.DateTimeFormat().resolvedOptions().timeZone || "") };
+  // Each visit gets its own fresh location, including returns to an open tab.
+  let geo;
 
-  // Warm start from cache so first tick is less likely to be blank
+  // Discard location data retained by earlier versions of the tracker.
   try {
-    const cg = JSON.parse(localStorage.getItem(GEO_CACHE_KEY) || '{}');
-    if (cg && (cg.city || cg.country || cg.postal || cg.timezone)) {
-      if (!geo.city)     geo.city = cg.city || "";
-      if (!geo.country)  geo.country = cg.country || "";
-      if (!geo.postal)   geo.postal = cg.postal || "";
-      if (!geo.timezone) geo.timezone = cg.timezone || geo.timezone;
-    }
+    localStorage.removeItem('geo_v1');
   } catch (_) {}
 
   async function fetchJSON(url, timeoutMs=2500){
@@ -355,37 +348,29 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">â€
       throw e;
     }
   }
-  async function tryIpapi(){
+  async function tryIpapi(geo){
     const j = await fetchJSON("https://ipapi.co/json/", 2500);
     geo.city     = geo.city     || j.city || "";
     geo.country  = geo.country  || j.country_name || j.country || "";
     geo.postal   = geo.postal   || j.postal || "";
     geo.timezone = geo.timezone || j.timezone || geo.timezone;
-    // update cache
-    try { localStorage.setItem(GEO_CACHE_KEY, JSON.stringify({
-      city: geo.city, country: geo.country, postal: geo.postal, timezone: geo.timezone
-    })); } catch(_) {}
   }
-  async function tryIpwho(){
+  async function tryIpwho(geo){
     const j = await fetchJSON("https://ipwho.is/", 2500);
     geo.city     = geo.city     || j.city || "";
     geo.country  = geo.country  || j.country || "";
     geo.postal   = geo.postal   || j.postal || j.zip || "";
     const tz = (j.timezone && (j.timezone.id || j.timezone.utc)) || "";
     geo.timezone = geo.timezone || tz || geo.timezone;
-    // update cache
-    try { localStorage.setItem(GEO_CACHE_KEY, JSON.stringify({
-      city: geo.city, country: geo.country, postal: geo.postal, timezone: geo.timezone
-    })); } catch(_) {}
   }
-  (async()=>{
+  async function refreshGeo(geo){
     let tries=0; while ((!geo.city || !geo.country) && tries<6){
-      try { await tryIpapi(); } catch(_) {}
-      if (!geo.city || !geo.country) { try { await tryIpwho(); } catch(_) {} }
+      try { await tryIpapi(geo); } catch(_) {}
+      if (!geo.city || !geo.country) { try { await tryIpwho(geo); } catch(_) {} }
       if (!geo.city && !geo.country) await new Promise(r=>setTimeout(r,2000));
       tries++;
     }
-  })();
+  }
 
   let ev = { clicks:0, keys:0, scroll_px:0, max_scroll_pct:0 };
   addEventListener("click", ()=>{ if(active) ev.clicks++; }, {passive:true});
@@ -431,6 +416,8 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">â€
   function stopBeat(){ if (timer) { clearInterval(timer); timer=null; } }
 
   function startVisit(){
+    geo = { country:"", city:"", postal:"", timezone:(Intl.DateTimeFormat().resolvedOptions().timeZone || "") };
+    refreshGeo(geo);
     visitId = Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8);
     startedAt = Date.now();
     baseMs = 0; active = true;

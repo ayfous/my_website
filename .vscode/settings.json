@@ -1,4 +1,18 @@
 {
+  "files.exclude": {
+    "**/Other": true,
+    "**/AGENTS.md": true,
+    "**/.agents": true,
+    "**/.codex": true,
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "**/Other": true,
+    "**/AGENTS.md": true,
+    "**/.agents": true,
+    "**/.codex": true,
+    "**/node_modules": true
+  },
   "livePreview.autoRefreshPreview": "On Changes to Saved Files",
   "livePreview.defaultPreviewPath": "/index.html",
   "livePreview.hostIP": "127.0.0.1",

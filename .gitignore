@@ -1,2 +1,6 @@
-Other/tmp/
+Other/
+AGENTS.md
+.agents/
+.codex/
+node_modules/
 .DS_Store
